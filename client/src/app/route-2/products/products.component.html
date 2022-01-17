@@ -1,0 +1,67 @@
+<app-header [pageName]="pageName"></app-header>
+
+<header class="d-flex flex-row justify-content-end flex-wrap align-items-center filterGap">
+  <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+    <button type="button" class="btn-secondary btn btn-sm" (click)="changeView('list')">
+      <i class="fa fa-bars"></i> List
+    </button>
+    <button type="button" class="btn-secondary btn btn-sm" (click)="changeView('grid')">
+      <i class="fa fa-th-large"></i> Grid
+    </button>
+  </div>
+
+  <select (change)="priceFilter($event)">
+    <option selected disabled>Filter by Price</option>
+    <option value="lowToHigh">Low To High</option>
+
+    <option value="highToLow">High To Low</option>
+  </select>
+</header>
+
+<main>
+  <div class="products-grid-view" *ngIf="isGridView; else listView">
+    <!-- <app-product [product]="product" *ngFor="let product of products">
+    </app-product> -->
+
+    <div class="gridView" *ngFor="let product of products">
+      <div class="img-container">
+        <img src="../../../assets/images/blue-tshirt.jpg" class="card-img-top" alt="..." />
+      </div>
+      <div class="card-body">
+        <h5 class="mb-0">{{ product.brandName | titlecase }}</h5>
+        <p>{{ product.type }}</p>
+        <b>
+          <p class="mb-0">&#8377;{{ product.cost }}</p>
+        </b>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #listView>
+    <div class="products-list-view">
+      <!-- <app-product [product]="product" [listView]="!isGridView" *ngFor="let product of products">
+      </app-product> -->
+
+      <div class="listView p-2" *ngFor="let product of products">
+        <div class="list-head">
+          <img src="../../../assets/images/blue-tshirt.jpg" class="card-img-top" alt="..." />
+          <div>
+            <h5>{{ product.brandName | titlecase }}</h5>
+          </div>
+        </div>
+
+        <div class="list-content">
+          <div class="list-type">
+            <p>{{ product.type }}</p>
+          </div>
+
+          <div>
+            <b>
+              <h5>&#8377;{{ product.cost }}</h5>
+            </b>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</main>

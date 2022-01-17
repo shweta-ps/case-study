@@ -1,0 +1,17 @@
+
+@import '../../../assets/variables.scss';
+
+.table {
+  width: 50%;
+  margin: auto;
+}
+
+
+h4 {
+    text-align: center;
+}
+
+th {
+  cursor: pointer;
+  background-color: $lightgrey;
+}

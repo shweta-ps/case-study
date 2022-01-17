@@ -1,0 +1,25 @@
+.btn-container, .form-group {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.form-group {
+    justify-content: start;
+}
+
+.btn-container {
+    justify-content: end;
+}
+
+main {
+    padding:70px;
+}
+.label-div {
+    flex-basis: 36%;
+    font-weight: 600;
+}
+
+.input-div {
+    flex-basis: 70%;
+}

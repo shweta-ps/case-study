@@ -1,0 +1,18 @@
+@import '../../../assets/variables.scss';
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap:15px;
+  }
+.child {
+  flex-basis: 48%;
+}
+
+.child-border {
+  border: 2px solid $black;
+}
+main {
+  border: 2px solid $black;
+}

@@ -1,0 +1,24 @@
+<app-header [pageName]="pageName"></app-header>
+
+<table class="table table-bordered mt-5">
+    <thead>
+        <tr>
+            <th (click)="sortData(title)" *ngFor="let title of titles" scope="col">
+                <i class="fas fa-sort-alpha-down-alt"></i>{{title | titlecase}}
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        <tr *ngFor="let marks of studentMarks">
+            <td> {{marks.name | titlecase}}</td>
+            <td> {{marks.class}} </td>
+            <td> {{marks.section}} </td>
+            <td> {{marks.sub1}} </td>
+            <td> {{marks.sub2}} </td>
+            <td> {{marks.sub3}} </td>
+        </tr>
+
+    </tbody>
+</table>

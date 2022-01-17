@@ -1,0 +1,27 @@
+header {
+    background-color: lavender;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+a {
+    padding-left: 22px;
+    text-decoration: none;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+p {
+  text-align: center;
+}
+
+.active {
+  border:2px solid blue;
+}
+

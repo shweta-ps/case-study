@@ -1,0 +1,38 @@
+
+@import '../../../assets/variables.scss';
+
+ /** for rotation */
+p {
+  animation: rotation 2s infinite linear;
+  text-align: center;
+  font-weight:bold;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+/** for rotation done */
+
+div {
+  border: 2px solid $black;
+  margin: 15px;
+}
+
+.outer-div {
+  width: 50%;
+  margin: auto;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .outer-div {
+    width: 100%;
+  }
+}
+

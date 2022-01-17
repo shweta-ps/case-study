@@ -1,0 +1,19 @@
+<header class="p-3">
+  <h4>Case Study Assignment</h4>
+  <nav>
+  
+    <div class="links btn-group me-2" role="group" aria-label="First group">
+      <button [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"  type="button" class="btn btn-light">Route-1</button>
+      <button  [routerLink]="['/route-2']" routerLinkActive="active" type="button"  class="btn btn-secondary">Route-2</button>
+      <button   [routerLink]="['/route-3'] " routerLinkActive="active"  type="button" class="btn btn-light">Route-3</button>
+      <button   [routerLink]="['/route-4']" routerLinkActive="active" type="button" class="btn btn-secondary">Route-4</button>
+      <button  [routerLink]="['/route-5']" routerLinkActive="active" type="button" class="btn btn-light">Route-5</button>
+      <button  [routerLink]="['/route-6']" routerLinkActive="active" type="button" class="btn btn-secondary">Route-6</button>
+    </div>
+
+  </nav>
+</header>
+<main>
+
+<router-outlet></router-outlet>
+</main>

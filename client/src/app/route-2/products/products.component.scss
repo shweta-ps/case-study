@@ -1,0 +1,91 @@
+@import '../../../assets/variables.scss';
+
+
+header,
+main {
+  margin-bottom: 20px;
+  padding: 15px;
+  width:90%;
+  margin:auto;
+}
+
+.filterGap {
+  gap: 30px;
+}
+
+.products-grid-view {
+  display: flex;
+  justify-content: space-around;
+  gap: 40px 20px;
+  flex-wrap: wrap;
+}
+
+.products-list-view {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+
+  p,
+  h5 {
+    margin-bottom: 0px;
+  }
+
+  .listView {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img {
+      height: 50px;
+      width: 50px;
+    }
+
+    border: 1px solid $grey;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .products-list-view {
+  .listView {
+    flex-basis: 100%;
+  }
+}}
+
+.list-content {
+  flex-basis: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.list-head {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
+}
+
+.gridView {
+  img {
+    height: 150px;
+  }
+  border: 1px solid $grey;
+  padding: 15px;
+  .img-container {
+    margin: auto;
+    width: 150px;
+
+  }
+  .card-body {
+    text-align: center;
+  }
+  min-width: 230px;
+}
+
+.list-type {
+  flex-basis: 100%;
+}
+

@@ -1,0 +1,4 @@
+ <div *ngFor="let log of logsHistory" class="pl-3">
+<p *ngIf="log.started">Started at {{log.time | date:'short'}}</p>
+<p *ngIf="!log.started">Paused at {{log.time | date:'short'}}</p>
+</div> 
